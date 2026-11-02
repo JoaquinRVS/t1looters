@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>T1L | T1LOOTERS Call of Duty Clan</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1f1214; --surface:#2e1a1d; --line:#4f2a2f; --text:#f5ecec; --muted:#c9b3b5; --accent:#ff4040; --accent-ink:#1f1214;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1f1214;--surface:#2e1a1d;--text:#f5ecec}}
+:root[data-theme="dark"]{--bg:#1f1214;--surface:#2e1a1d;--text:#f5ecec}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Barlow,system-ui,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:'Big Shoulders Display',Impact,sans-serif;margin:0;line-height:.95;text-transform:uppercase}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px clamp(16px,4vw,48px);border-bottom:2px solid var(--line)}
+.brand{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:900;font-size:28px;letter-spacing:.04em;text-decoration:none}
+nav{display:flex;gap:22px;margin-left:auto}
+nav a{text-decoration:none;font-weight:600;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.logo{width:64px;height:64px;border:2px dashed var(--accent);border-radius:4px;background:var(--surface);color:var(--accent);display:grid;place-items:center;overflow:hidden;cursor:pointer;padding:0;font:600 12px/1.1 Barlow,sans-serif;text-align:center;flex:none}
+.logo img{width:100%;height:100%;object-fit:cover}
+.logo.has{border-style:solid}
+
+.hero{padding:clamp(48px,9vw,120px) clamp(16px,4vw,48px) clamp(40px,7vw,90px);max-width:1200px;margin:0 auto}
+.hero h1{font-weight:900;font-size:clamp(64px,16vw,200px);letter-spacing:.01em;color:var(--text)}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--accent)}
+.hero p{max-width:46ch;color:var(--muted);font-size:20px;margin:28px 0}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:14px 26px;text-decoration:none;border-radius:2px;border:0;cursor:pointer;font-size:17px}
+.btn:hover{filter:brightness(1.08)}
+
+section{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,4vw,48px)}
+section h2{font-size:clamp(40px,6vw,72px);margin-bottom:12px}
+.sub{color:var(--muted);max-width:60ch;margin:0 0 32px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:4px;overflow:hidden}
+.photo{position:relative;width:100%;aspect-ratio:1;background:var(--bg);border:0;display:grid;place-items:center;color:var(--muted);cursor:pointer;padding:0;font:600 14px Barlow,sans-serif}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo:hover{color:var(--accent)}
+.info{padding:10px 12px 12px;border-top:2px solid var(--line)}
+.name{width:100%;background:transparent;border:0;color:var(--text);font:900 22px 'Big Shoulders Display',Impact,sans-serif;text-transform:uppercase;padding:0}
+.role{font-size:14px;color:var(--accent);font-weight:600}
+.tk{display:flex;gap:8px;align-items:center;margin-top:8px}
+.tkin{flex:1;min-width:0;background:var(--bg);border:1px solid var(--line);color:var(--text);padding:5px 7px;font:14px Barlow,sans-serif}
+.tkl{background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:13px;padding:5px 9px;border-radius:2px;text-decoration:none}
+.tkl[hidden]{display:none}
+.card.leader{border-color:var(--accent)}
+
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.about h3{font-size:30px;color:var(--accent);margin-bottom:8px}
+.about p{margin:0;color:var(--muted)}
+.perks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.perks li{background:var(--surface);border-left:6px solid var(--accent);padding:16px 18px}
+.perks h3{font-size:28px;margin-bottom:6px}
+.perks p{margin:0;color:var(--muted)}
+.join{text-align:left;border-top:2px solid var(--line)}
+footer{padding:28px clamp(16px,4vw,48px);border-top:2px solid var(--line);color:var(--muted);font-size:14px}
+.tip{font-size:14px;color:var(--muted);margin-top:20px}
+@media (max-width:620px){nav{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#top">T1LOOTERS</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#roster">Roster</a>
+    <a href="#join">Join</a>
+  </nav>
+  <button class="logo" id="logo" aria-label="Add clan logo" title="Click to add your logo">Add logo</button>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <h1>T1<span>LOOTERS</span></h1>
+    <p>A Call of Duty clan built on teamwork, fast pushes and taking everything on the map.</p>
+  </div>
+
+  <section id="about">
+    <div class="about">
+      <div><h3>Who we are</h3><p>Twenty players who queue together, trust each other’s calls and play to win.</p></div>
+      <div><h3>How we play</h3><p>Objective first, communication always. We loot the lobby, then we loot the leaderboard.</p></div>
+      <div><h3>What we want</h3><p>Active players with a mic, a good attitude and the drive to improve every match.</p></div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <h2>Benefits</h2>
+    <p class="sub">What you get when you join T1LOOTERS.</p>
+    <ul class="perks">
+      <li><h3>Weekly scrims</h3><p>Practice matches against other clans to sharpen your game.</p></li>
+      <li><h3>Clan events</h3><p>Custom lobbies and tournaments just for members.</p></li>
+    </ul>
+  </section>
+
+  <section id="roster">
+    <h2>The 20</h2>
+    <p class="sub">Click a photo to add it, click a name to rename the player, and type each player’s TikTok handle.</p>
+    <div class="grid" id="grid"></div>
+    <p class="tip">Photos and names stay in this browser. Replace them any time.</p>
+  </section>
+
+  <section class="join" id="join">
+    <h2>Want in?</h2>
+    <p class="sub">Send us your gamertag and your best stats. We hold tryouts when a spot opens.</p>
+    <a class="btn" href="#top">Back to top</a>
+  </section>
+</main>
+
+<footer>© T1LOOTERS. Not affiliated with Activision or Call of Duty.</footer>
+
+<input type="file" id="file" accept="image/*" hidden>
+<script>
+(function(){
+  // Edit each player's name and TikTok handle here (example: tiktok:'t1looters')
+  var PLAYERS=[
+    {name:'Leader',tiktok:''},
+    {name:'Player 2',tiktok:''},
+    {name:'Player 3',tiktok:''},
+    {name:'Player 4',tiktok:''},
+    {name:'Player 5',tiktok:''},
+    {name:'Player 6',tiktok:''},
+    {name:'Player 7',tiktok:''},
+    {name:'Player 8',tiktok:''},
+    {name:'Player 9',tiktok:''},
+    {name:'Player 10',tiktok:''},
+    {name:'Player 11',tiktok:''},
+    {name:'Player 12',tiktok:''},
+    {name:'Player 13',tiktok:''},
+    {name:'Player 14',tiktok:''},
+    {name:'Player 15',tiktok:''},
+    {name:'Player 16',tiktok:''},
+    {name:'Player 17',tiktok:''},
+    {name:'Player 18',tiktok:''},
+    {name:'Player 19',tiktok:''},
+    {name:'Player 20',tiktok:''},
+  ];
+  var KEY='t1looters-v1', state={logo:'',players:[]};
+  for(var i=0;i<20;i++) state.players.push({name:PLAYERS[i].name,tiktok:PLAYERS[i].tiktok,photo:''});
+  try{var s=localStorage.getItem(KEY); if(s){var p=JSON.parse(s); if(p&&p.players&&p.players.length===20) state=p;}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+
+  var file=document.getElementById('file'), target=null;
+  function pick(cb){target=cb;file.value='';file.click()}
+  file.addEventListener('change',function(){
+    var f=file.files[0]; if(!f||!target) return;
+    var r=new FileReader();
+    r.onload=function(){
+      var img=new Image();
+      img.onload=function(){
+        var m=400,sc=Math.min(1,m/Math.max(img.width,img.height)),c=document.createElement('canvas');
+        c.width=Math.round(img.width*sc);c.height=Math.round(img.height*sc);
+        c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+        target(c.toDataURL('image/jpeg',.82));
+      };
+      img.src=r.result;
+    };
+    r.readAsDataURL(f);
+  });
+
+  var logo=document.getElementById('logo');
+  function drawLogo(){
+    logo.innerHTML='';logo.classList.remove('has');
+    var im=document.createElement('img');im.alt='T1LOOTERS logo';
+    im.onload=function(){logo.classList.add('has')};
+    im.onerror=function(){logo.innerHTML='';logo.textContent='Add logo';logo.classList.remove('has')};
+    im.src=state.logo||'images/logo.png';logo.appendChild(im);
+  }
+  logo.addEventListener('click',function(){pick(function(d){state.logo=d;drawLogo();save()})});
+  drawLogo();
+
+  var grid=document.getElementById('grid');
+  state.players.forEach(function(pl,i){
+    var card=document.createElement('div');card.className='card'+(i===0?' leader':'');
+    var b=document.createElement('button');b.className='photo';b.setAttribute('aria-label','Add photo for player '+(i+1));
+    function draw(){b.innerHTML='';var im=document.createElement('img');im.alt=pl.name;
+      im.onerror=function(){b.innerHTML='';b.textContent='Add photo'};
+      im.src=pl.photo||('images/player'+(i+1)+'.jpg');b.appendChild(im)}
+    b.addEventListener('click',function(){pick(function(d){pl.photo=d;draw();save()})});
+    draw();
+    var info=document.createElement('div');info.className='info';
+    var n=document.createElement('input');n.className='name';n.value=pl.name;n.maxLength=20;n.setAttribute('aria-label','Player '+(i+1)+' name');
+    n.addEventListener('input',function(){pl.name=n.value;save()});
+    var role=document.createElement('div');role.className='role';role.textContent=i===0?'Clan leader':'Looter';
+    if(pl.tiktok===undefined)pl.tiktok=PLAYERS[i].tiktok;
+    var tk=document.createElement('div');tk.className='tk';
+    var tin=document.createElement('input');tin.className='tkin';tin.placeholder='@tiktok';tin.maxLength=30;tin.value=pl.tiktok;tin.setAttribute('aria-label','Player '+(i+1)+' TikTok');
+    var tl=document.createElement('a');tl.className='tkl';tl.target='_blank';tl.rel='noopener';tl.textContent='TikTok';
+    function tkUpdate(){var h=(pl.tiktok||'').replace(/^@/,'').replace(/[^\w.]/g,'');if(h){tl.href='https://www.tiktok.com/@'+h;tl.hidden=false}else tl.hidden=true}
+    tin.addEventListener('input',function(){pl.tiktok=tin.value;tkUpdate();save()});
+    tkUpdate();tk.appendChild(tin);tk.appendChild(tl);
+    info.appendChild(n);info.appendChild(role);info.appendChild(tk);card.appendChild(b);card.appendChild(info);grid.appendChild(card);
+  });
+})();
+</script>
+</body>
+</html>
